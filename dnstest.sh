@@ -12,16 +12,16 @@ PROVIDERSV4="
 8.8.8.8#GooglePublicDNS
 8.20.247.20#ComodoSecureDNS
 9.9.9.9#Quad9
-149.112.121.10#CIRA-CanadianShield
+149.112.121.10#CIRA-CA_Shield
 208.67.222.123#Cisco-OpenDNS
 "
 
 PROVIDERSV6="
-2001:4860:4860::8888#GooglePublicDNS-IPv6
-2606:4700:4700::1111#CloudflareDNS-IPv6
-2620:10A:80BB::20#CIRA-CanadianShield-IPv6
-2620:fe::fe#Quad9-IPv6
-2620:119:35::35#Cisco-OpenDNS-IPv6
+2001:4860:4860::8888#GooglePublicDNS_v6
+2606:4700:4700::1111#CloudflareDNS_v6
+2620:10A:80BB::20#CIRA-CA_Shield_v6
+2620:fe::fe#Quad9_v6
+2620:119:35::35#Cisco-OpenDNS_v6
 "
 
 # Testing for IPv6
