@@ -8,30 +8,20 @@ command -v bc > /dev/null || { echo "error: bc was not found. Please install bc.
 NAMESERVERS=`cat /etc/resolv.conf | grep ^nameserver | cut -d " " -f 2 | sed 's/\(.*\)/&#&/'`
 
 PROVIDERSV4="
-1.1.1.1#cloudflare 
-4.2.2.1#level3 
-8.8.8.8#google 
-9.9.9.9#quad9 
-80.80.80.80#freenom 
-208.67.222.123#opendns 
-199.85.126.20#norton 
-185.228.168.168#cleanbrowsing 
-77.88.8.7#yandex 
-176.103.130.132#adguard 
-156.154.70.3#neustar 
-8.26.56.26#comodo
-45.90.28.202#nextdns
+1.1.1.1#CloudflareDNS
+8.8.8.8#GooglePublicDNS
+8.20.247.20#ComodoSecureDNS
+9.9.9.9#Quad9
+149.112.121.10#CIRA-CanadianShield
+208.67.222.123#Cisco-OpenDNS
 "
 
 PROVIDERSV6="
-2606:4700:4700::1111#cloudflare-v6
-2001:4860:4860::8888#google-v6
-2620:fe::fe#quad9-v6
-2620:119:35::35#opendns-v6
-2a0d:2a00:1::1#cleanbrowsing-v6
-2a02:6b8::feed:0ff#yandex-v6
-2a00:5a60::ad1:0ff#adguard-v6
-2610:a1:1018::3#neustar-v6
+2001:4860:4860::8888#GooglePublicDNS-IPv6
+2606:4700:4700::1111#CloudflareDNS-IPv6
+2620:10A:80BB::20#CIRA-CanadianShield-IPv6
+2620:fe::fe#Quad9-IPv6
+2620:119:35::35#Cisco-OpenDNS-IPv6
 "
 
 # Testing for IPv6
@@ -44,7 +34,7 @@ providerstotest=$PROVIDERSV4
 
 if [ "x$1" = "xipv6" ]; then
     if [ "x$hasipv6" = "x" ]; then
-        echo "error: IPv6 support not found. Unable to do the ipv6 test."; exit 1;
+        echo "error: IPv6 support not found. Unable to do IPv6 test."; exit 1;
     fi
     providerstotest=$PROVIDERSV6
 
@@ -64,7 +54,7 @@ fi
     
 
 # Domains to test. Duplicated domains are ok
-DOMAINS2TEST="www.google.com amazon.com facebook.com www.youtube.com www.reddit.com  wikipedia.org twitter.com gmail.com www.google.com whatsapp.com"
+DOMAINS2TEST="www.amazon.com fb.com google.com reddit.com twitter.com www.tiktok.com wikipedia.org"
 
 
 totaldomains=0
