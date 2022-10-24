@@ -54,7 +54,7 @@ fi
     
 
 # Domains to test. Duplicated domains are ok
-DOMAINS2TEST="www.amazon.com fb.com google.com reddit.com twitter.com www.tiktok.com wikipedia.org"
+DOMAINS2TEST="www.amazon.com www.canada.ca fb.com google.com www.quebec.ca reddit.com twitter.com www.tiktok.com wikipedia.org"
 
 
 totaldomains=0
